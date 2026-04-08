@@ -1,1 +1,13 @@
-{"name": "calculator", "version": "1.0.0", "description": "Simple web calculator", "main": "index.html", "scripts": {"screenshot": "node screenshot.js", "screenshot:watch": "nodemon --exec node screenshot.js"}, "devDependencies": {"playwright": "^1.40.0"}}
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Simple web calculator",
+  "main": "index.html",
+  "scripts": {
+    "screenshot": "node screenshot.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0",
+    "http-server": "^14.1.1"
+  }
+}
