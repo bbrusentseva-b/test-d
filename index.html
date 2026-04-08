@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Простой калькулятор</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="keys">
+      <button class="key" data-action="digit">7</button>
+      <button class="key" data-action="digit">8</button>
+      <button class="key" data-action="digit">9</button>
+      <button class="key operator" data-action="operator">÷</button>
+
+      <button class="key" data-action="digit">4</button>
+      <button class="key" data-action="digit">5</button>
+      <button class="key" data-action="digit">6</button>
+      <button class="key operator" data-action="operator">×</button>
+
+      <button class="key" data-action="digit">1</button>
+      <button class="key" data-action="digit">2</button>
+      <button class="key" data-action="digit">3</button>
+      <button class="key operator" data-action="operator">−</button>
+
+      <button class="key" data-action="digit">0</button>
+      <button class="key" data-action="decimal">.</button>
+      <button class="key" id="equals" data-action="equals">=</button>
+      <button class="key operator" data-action="operator">+</button>
+
+      <button class="key clear" id="clear">C</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
