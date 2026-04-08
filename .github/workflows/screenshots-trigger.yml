@@ -1,0 +1,34 @@
+name: Generate Screenshots
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Install Playwright browsers
+      run: npx playwright install chromium
+    
+    - name: Generate screenshots
+      run: npm run screenshot
+    
+    - name: Commit and push screenshots
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add screenshots/ || true
+        git commit -m "Add screenshots from GitHub Actions" || true
+        git push || true
